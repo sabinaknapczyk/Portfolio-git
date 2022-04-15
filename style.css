@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 8px;
+}
+body {
+    font-family: Arial, Halvetica, sans-serif;
+    background: #333;
+    color: black;
+    line-height: 1.6;
+    height: 100vh;
+    overflow: hidden;
+}
+.wrapper {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background: rgba(0,0,0,0.7);
+}
+.navbar ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+}
+.navbar ul li {
+    margin: 0 1rem;
+    padding: 1rem;
+}
+.navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f4f4f4;
+}
+.navbar ul li a:hover {
+    color: skyblue;
+}
+.list {
+    text-decoration: none;
+    color: white;
+    transition: color .2s ease-in-out;
+}
+.list:hover {
+    font-size: 1.2rem;
+    color: skyblue;
+}
+.ul {
+    list-style: none;
+    font-size: 19px;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: center;
+}
+section h1 {
+    font-size: 2.5rem;
+}
+section p {
+    font-size: 1.5rem;
+}
+section#home {
+    background: url('picture1.png') no-repeat center center/cover;
+}
+section#about {
+    background-color: #b3b3b3;
+}
+section#projects {
+    background-color: #d40000;
+}
+section#contact {
+    background-color: #b3b3b3;
+}
+@media (min-width: 576px) {
+    .list:hover {
+        font-size: 3rem;
+    }
+    .navbar {
+        font-size: 1.4rem;
+    }
+    section h1 {
+        font-size: 3rem;
+    }
+    section p {
+        font-size: 2rem;
+    }
+}
+@media (min-width: 768px) {
+    .list:hover {
+        font-size: 1.6rem;
+    }
+    .navbar {
+        font-size: 1.6rem;
+    }
+    section h1 {
+        font-size: 3.2rem;
+    }
+    section p {
+        font-size: 2.2rem;
+    }
+}
+@media (min-width: 992px) {
+    .list:hover {
+        font-size: 1.8rem;
+    }
+    .navbar {
+        font-size: 1.8rem;
+    }
+    section h1 {
+        font-size: 3.4rem;
+    }
+    section p {
+        font-size: 2.4rem;
+    }
+}
+@media (min-width: 1024px) {
+    .list:hover {
+        font-size: 2.5rem;
+    }
+    .navbar {
+        font-size: 2.5rem;
+    }
+    section h1 {
+        font-size: 4rem;
+    }
+    section p {
+        font-size: 3.2rem;
+    }
+}
+@media (orientation: portrait) {
+    section h1 span::after {
+        content: '\A';
+        white-space: pre;
+    }
+}
+@media (orientation: portrait) {
+    section p span::after {
+        content: '\A';
+        white-space: pre;
+    }
+}
